@@ -3,12 +3,12 @@ Don't you find it annoying that you have to mine ores, transport them with count
 
 # Features
 *   This mod adds a Stacked mining planner that allows you to mark ores to be mined directly as their stacked version.
-*   To unlock Stacked mining planner, research the technology "Stacked Ore Mining Technology".
+*   To unlock Stacked mining planner, research the technology "Stacked Ore Mining Technology".  
 ![alt text](https://i.imgur.com/eO5YPr5.jpg "Stacked Ore Mining Technology")
-*   The research unlocks a new shortcut in your shortcut bar (default controls: ALT + M).
+*   The research unlocks a new shortcut in your shortcut bar (default controls: ALT + M).  
 ![alt text](https://i.imgur.com/B5571GF.jpg "Stacked Mining Shortcut")
 *   Use the Stacked mining planner like a deconstruction planner and drag it over the ores you want to mark. 
-*   The ores marked for stacked mining will have an increased mining time and decreased amount depending on your settings in the mod Deadlock's Stacking Beltboxes & Compact Loaders.
+*   The ores marked for stacked mining will have an increased mining time and decreased amount depending on your settings in the mod Deadlock's Stacking Beltboxes & Compact Loaders.  
 ![alt text](https://i.imgur.com/gy2D8WZ.jpg "Stacked Ore")
 *   The total yield and (unstacked) items / second of an ore patch remain unchanged.
 *   To reverse the marking of an ore patch, use the Stacked mining planner + SHIFT (like a deconstruction planner).

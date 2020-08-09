@@ -6,13 +6,15 @@ end
 -- check if the stacked version of the item with the given name exists and in case it does not, create it
     -- returns true when an item was created or if it , otherwise false
 local function createStackedVersion(name)
-    if data.raw["item"][name] then 
-        if data.raw["item"]["deadlock-stack-" .. name] then
+    local base = data.raw["item"][name] or data.raw["tool"][name]
+    if base then 
+        local item_type = data.raw["item"][name] and "item" or "tool"
+        if data.raw[item_type]["deadlock-stack-" .. name] then
             log("debug createStackedVersion: stacked version of the item " .. name .. " already exists")
             return true
         else
             log("debug createStackedVersion: creating stacked version of the item " .. name)
-            deadlock.add_stack(name)
+            deadlock.add_stack(name, nil, nil, nil, item_type)
             return true
         end
     else
@@ -52,7 +54,7 @@ local function createStackedOre(oreName)
         log("debug2.3.1: minable of " .. oreName .. " before overwrite:\n" .. serpent.block(ore.minable))
         
         if not createStackedVersion(ore.minable.result) then
-            log("debug2.3.2: something went wrong with createStackedVersion() for " .. result.name)
+            log("debug2.3.2: something went wrong with createStackedVersion() for " .. ore.minable.result)
         end
         ore.minable.results = 
         {{

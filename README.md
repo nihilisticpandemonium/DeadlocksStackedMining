@@ -4,7 +4,7 @@ Don't you find it annoying that you have to mine ores, transport them with count
 # Features
 *   This mod adds a Stacked mining planner that allows you to mark ores to be mined directly as their stacked version.
 *   To unlock Stacked mining planner, research the technology "Stacked Ore Mining Technology".  
-![alt text](https://i.imgur.com/eO5YPr5.jpg "Stacked Ore Mining Technology")
+![alt text](https://i.imgur.com/9Bt85QG.jpg "Stacked Ore Mining Technology")
 *   The research unlocks a new shortcut in your shortcut bar (default controls: ALT + M).  
 ![alt text](https://i.imgur.com/B5571GF.jpg "Stacked Mining Shortcut")
 *   Use the Stacked mining planner like a deconstruction planner and drag it over the ores you want to mark. 

@@ -1,11 +1,11 @@
 {
     "name": "Kythbloods_Stacked_Mining",
     "version": "0.1.7",
-    "factorio_version": "0.18",
+    "factorio_version": "1.0",
     "title": "Deadlock's Stacked Mining",
     "author": "Kythblood",
     "dependencies": [
-        "base >= 0.18.3",
+        "base >= 1.0.0",
         "deadlock-beltboxes-loaders >= 2.3.0",
         "? angelsrefining >= 0.9", 
         "? angelspetrochem >= 0.7", 

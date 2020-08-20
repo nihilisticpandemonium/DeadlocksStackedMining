@@ -4,7 +4,7 @@ Don't you find it annoying that you have to mine ores, transport them with count
 # Features
 *   This mod adds a Stacked mining planner that allows you to mark ores to be mined directly as their stacked version.
 *   To unlock Stacked mining planner, research the technology "Stacked Ore Mining Technology".  
-![alt text](https://i.imgur.com/eO5YPr5.jpg "Stacked Ore Mining Technology")
+![alt text](https://i.imgur.com/9Bt85QG.jpg "Stacked Ore Mining Technology")
 *   The research unlocks a new shortcut in your shortcut bar (default controls: ALT + M).  
 ![alt text](https://i.imgur.com/B5571GF.jpg "Stacked Mining Shortcut")
 *   Use the Stacked mining planner like a deconstruction planner and drag it over the ores you want to mark. 
@@ -31,11 +31,10 @@ Don't you find it annoying that you have to mine ores, transport them with count
 *   If you notice some debug code in your factorio-current.log, just ignore it. It has no influence on the game. It will be removed as soon as I am sure that the mod runs without any bugs.
 # Mod support & Compatibility
 *   Compatible with Mining Drones and should work with all other mods that add higher tier / different miners 
-*   Support for all modded ores (resources of the category "basic-solid")
+*   Support for all modded ores (resources of the category "basic-solid") and Imersite from Krastorio 2.
 *   Tested for Krastorio 2, Bob's Ores and Angel's Refining. Let me know if you come across any bugs/issues.
 *   A stacked version of all mining results of the modded ores is created even if no add-on is installed that adds support for these ores, meaning this mod can be used without any other add-on that adds stacking support for the respective mods.
 They work perfectly fine. However, this mod uses a function from [Deadlock's Stacking Beltboxes & Compact Loaders](https://mods.factorio.com/mod/deadlock-beltboxes-loaders) to generate the icons and does not include any stacked icons, because the graphics of some mods might be protected by a license. Use other add-ons that add support including graphics for the respective mods to improve performance.
-*   Support for new modded resource categories planned (e.g. Imersite from Krastorio 2)  
 ![alt text](https://i.imgur.com/tuBhn4I.jpg "Krastorio 2 Rare Metals & Bobs Ores, with electric mining drill 2 and 3")
 
 

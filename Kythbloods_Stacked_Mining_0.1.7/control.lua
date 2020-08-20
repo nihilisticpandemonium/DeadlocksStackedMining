@@ -33,7 +33,7 @@ local function markOres(player, entities)
 	for _,entity in pairs(entities) do
 		if entity.valid then
 			if entity.type == "resource" then
-				if game.entity_prototypes[entity.name].resource_category == "basic-solid" then
+                if game.entity_prototypes[entity.name].resource_category == "basic-solid" or game.entity_prototypes[entity.name].resource_category == "kr-quarry" then
 					if not isOreStacked(entity) then
 						convertEntity(entity, "stacked-" .. entity.name, true)
 					end
@@ -51,7 +51,7 @@ local function unmarkOres(player, entities)
 	for _,entity in pairs(entities) do
 		if entity.valid then
 			if entity.type == "resource" then
-				if game.entity_prototypes[entity.name].resource_category == "basic-solid" then
+				if game.entity_prototypes[entity.name].resource_category == "basic-solid" or game.entity_prototypes[entity.name].resource_category == "kr-quarry" then
 					if isOreStacked(entity) then
 						convertEntity(entity, string.gsub(entity.name, "stacked%-", ""), false)
 					end

@@ -4,17 +4,15 @@ if settings.startup["ky-overwrite-deadlock-stack-size"] == true then
 end
 
 -- check if the stacked version of the item with the given name exists and in case it does not, create it
-    -- returns true when an item was created or if it , otherwise false
+    -- returns true when an item was created or if it already exists, otherwise false
 local function createStackedVersion(name)
-    local base = data.raw["item"][name] or data.raw["tool"][name]
-    if base then 
-        local item_type = data.raw["item"][name] and "item" or "tool"
-        if data.raw[item_type]["deadlock-stack-" .. name] then
+    if data.raw["item"][name] then 
+        if data.raw["item"]["deadlock-stack-" .. name] then
             log("debug createStackedVersion: stacked version of the item " .. name .. " already exists")
             return true
         else
             log("debug createStackedVersion: creating stacked version of the item " .. name)
-            deadlock.add_stack(name, nil, nil, nil, item_type)
+            deadlock.add_stack(name)
             return true
         end
     else
@@ -53,8 +51,8 @@ local function createStackedOre(oreName)
     elseif ore.minable.result then
         log("debug2.3.1: minable of " .. oreName .. " before overwrite:\n" .. serpent.block(ore.minable))
         
-        if not createStackedVersion(ore.minable.result) then
-            log("debug2.3.2: something went wrong with createStackedVersion() for " .. ore.minable.result)
+        if createStackedVersion(ore.minable.result) == false then
+            log("debug2.3.2: something went wrong with createStackedVersion() for " .. result.name)
         end
         ore.minable.results = 
         {{
@@ -83,7 +81,7 @@ local resourceTable = {}
 for _,resource in pairs(data.raw["resource"]) do
     log("debug1: start creation of stacked ore for " .. resource.name)
 
-    if resource.category == nil or resource.category == "basic-solid" then   
+    if resource.category == nil or resource.category == "basic-solid" or resource.category == "kr-quarry" then   
         table.insert(resourceTable, createStackedOre(resource.name))
         log("debug3: finished creation of stacked ore for " .. resource.name)
     elseif resource.category == "basic-fluid" then

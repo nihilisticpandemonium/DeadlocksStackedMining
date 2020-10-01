@@ -23,11 +23,13 @@ end
 -- check if the stacked version of the item with the given name exists and in case it does not, create it
 -- returns true when an item was created or if it already exists, otherwise false
 local function createStackedVersion(name)
-    if data.raw["item"][name] then
-        if data.raw["item"]["deadlock-stack-" .. name] then
+    local base = data.raw["item"][name] or data.raw["tool"][name]
+    if base then
+        local item_type = data.raw["item"][name] and "item" or "tool"
+        if data.raw[item_type]["deadlock-stack-" .. name] then
             return true
         else
-            deadlock.add_stack(name)
+            deadlock.add_stack(name, nil, nil, nil, item_type)
             log("Created stacked version of the item " .. name .. ", because it was missing. It is advised to install a mod that adds support for the mod that this item is from in case you did not already")
             return true
         end

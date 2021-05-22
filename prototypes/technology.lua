@@ -8,7 +8,7 @@ data:extend(
 			"mining-productivity-1",
 			"chemical-science-pack",
 		},
-		icon = "__Kythbloods_Stacked_Mining__/graphics/technology/stacked-mining-tech.png",
+		icon = "__Stacked_Mining__/graphics/technology/stacked-mining-tech.png",
 		unit =
 		{
 		  count = 350,

@@ -1,13 +1,16 @@
 {
-    "name": "Kythbloods_Stacked_Mining",
-    "version": "0.1.17",
-    "factorio_version": "1.0",
-    "title": "Deadlock's Stacked Mining",
-    "author": "Kythblood",
+    "name": "Stacked_Mining",
+    "version": "1.1.3",
+    "factorio_version": "1.1",
+    "title": "Deadlock's Stacked Mining (fixed for 1.1)",
+    "author": "Kythblood (updated by billbo99)",
     "dependencies": [
-        "base >= 1.0.0",
-        "deadlock-beltboxes-loaders >= 2.3.0",
+        "base",
+        "deadlock-beltboxes-loaders",
+        "? Krastorio2",
+        "? steinios_unlasting_oil",
         "? angelsinfiniteores",
+        "? IndustrialRevolutionStacking",
         "? CompressedFluids",
         "? FactorioExtended-Plus-Transport"
     ],

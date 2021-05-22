@@ -1,4 +1,4 @@
--- safely get the value of a setting 
+-- safely get the value of a setting
 local function getSettingValue(optionName)
     if settings["startup"] and settings["startup"][optionName] and settings["startup"][optionName].value then
 		return settings["startup"][optionName].value
@@ -6,7 +6,7 @@ local function getSettingValue(optionName)
     return false
 end
 
-if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pump") and 
+if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pump") and
     data.raw["offshore-pump"]["offshore-pump"] and data.raw.item["offshore-pump"] and data.raw.recipe["offshore-pump"] then
 
     if not mods["PressurizedBarrels"] then
@@ -17,7 +17,7 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
         local hp_offshore_pump_entity = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"])
 
         hp_offshore_pump_entity.name = "kyth-high-pressure-offshore-pump"
-        hp_offshore_pump_entity.icon = "__Kythbloods_Stacked_Mining__/graphics/icons/offshore-pump.png"
+        hp_offshore_pump_entity.icon = "__Stacked_Mining__/graphics/icons/offshore-pump.png"
         hp_offshore_pump_entity.icon_size = 64
         hp_offshore_pump_entity.icon_mipmaps = 4
         hp_offshore_pump_entity.icons = nil
@@ -33,20 +33,20 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
         hp_offshore_pump_entity.pumping_speed = hp_offshore_pump_entity.pumping_speed / getSettingValue("fluid-compression-rate")
         hp_offshore_pump_entity.minable.result = hp_offshore_pump_entity.name
 
-        hp_offshore_pump_entity.graphics_set.animation["east"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_East.png"
-        hp_offshore_pump_entity.graphics_set.animation["east"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_East.png"
-        hp_offshore_pump_entity.graphics_set.animation["north"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_North.png"
-        hp_offshore_pump_entity.graphics_set.animation["north"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_North.png"
-        hp_offshore_pump_entity.graphics_set.animation["south"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_South.png"
-        hp_offshore_pump_entity.graphics_set.animation["south"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_South.png"
-        hp_offshore_pump_entity.graphics_set.animation["west"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_West.png"
-        hp_offshore_pump_entity.graphics_set.animation["west"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_West.png"
+        hp_offshore_pump_entity.graphics_set.animation["east"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_East.png"
+        hp_offshore_pump_entity.graphics_set.animation["east"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_East.png"
+        hp_offshore_pump_entity.graphics_set.animation["north"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_North.png"
+        hp_offshore_pump_entity.graphics_set.animation["north"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_North.png"
+        hp_offshore_pump_entity.graphics_set.animation["south"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_South.png"
+        hp_offshore_pump_entity.graphics_set.animation["south"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_South.png"
+        hp_offshore_pump_entity.graphics_set.animation["west"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_West.png"
+        hp_offshore_pump_entity.graphics_set.animation["west"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_West.png"
 
 
         local hp_offshore_pump_item = table.deepcopy(data.raw.item["offshore-pump"])
 
         hp_offshore_pump_item.name = "kyth-high-pressure-offshore-pump"
-        hp_offshore_pump_item.icon = "__Kythbloods_Stacked_Mining__/graphics/icons/offshore-pump.png"
+        hp_offshore_pump_item.icon = "__Stacked_Mining__/graphics/icons/offshore-pump.png"
         hp_offshore_pump_item.icon_size = 64
         hp_offshore_pump_item.icon_mipmaps = 4
         hp_offshore_pump_item.icons = nil
@@ -57,7 +57,7 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
             hp_offshore_pump_item.order = "b[fluids]-a[offshore-pump]-high-pressure"
         end
 
-        local hp_offshore_pump_recipe = 
+        local hp_offshore_pump_recipe =
         {
             type = "recipe",
             name = "kyth-high-pressure-offshore-pump",
@@ -71,11 +71,11 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
             result = "kyth-high-pressure-offshore-pump"
         }
 
-        
+
         data:extend(
         {
             hp_offshore_pump_entity,
-            hp_offshore_pump_item, 
+            hp_offshore_pump_item,
             hp_offshore_pump_recipe
         })
 
@@ -90,7 +90,7 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
         local hp_offshore_pump_mk2_entity = table.deepcopy(data.raw["offshore-pump"]["offshore-pump-mk2"])
 
         hp_offshore_pump_mk2_entity.name = "kyth-high-pressure-offshore-pump-mk2"
-        hp_offshore_pump_mk2_entity.icon = "__Kythbloods_Stacked_Mining__/graphics/icons/offshore-pump-mk2.png"
+        hp_offshore_pump_mk2_entity.icon = "__Stacked_Mining__/graphics/icons/offshore-pump-mk2.png"
         hp_offshore_pump_mk2_entity.icon_size = 64
         hp_offshore_pump_mk2_entity.icon_mipmaps = 4
         hp_offshore_pump_mk2_entity.icons = nil
@@ -106,14 +106,14 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
         hp_offshore_pump_mk2_entity.pumping_speed = hp_offshore_pump_mk2_entity.pumping_speed / getSettingValue("fluid-compression-rate")
         hp_offshore_pump_mk2_entity.minable.result = hp_offshore_pump_mk2_entity.name
 
-        hp_offshore_pump_mk2_entity.graphics_set.animation["east"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_East.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["east"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_East.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["north"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_North.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["north"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_North.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["south"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_South.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["south"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_South.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["west"].layers[1].filename = "__Kythbloods_Stacked_Mining__/graphics/entity/offshore-pump_West.png"
-        hp_offshore_pump_mk2_entity.graphics_set.animation["west"].layers[1].hr_version.filename = "__Kythbloods_Stacked_Mining__/graphics/entity/hr-offshore-pump_West.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["east"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_East.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["east"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_East.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["north"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_North.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["north"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_North.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["south"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_South.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["south"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_South.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["west"].layers[1].filename = "__Stacked_Mining__/graphics/entity/offshore-pump_West.png"
+        hp_offshore_pump_mk2_entity.graphics_set.animation["west"].layers[1].hr_version.filename = "__Stacked_Mining__/graphics/entity/hr-offshore-pump_West.png"
 
         if mods["PressurizedBarrels"] and data.raw["offshore-pump"]["high-pressure-offshore-pump"] then
             data.raw["offshore-pump"]["high-pressure-offshore-pump"].next_upgrade = "kyth-high-pressure-offshore-pump-mk2"
@@ -124,7 +124,7 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
         local hp_offshore_pump_mk2_item = table.deepcopy(data.raw.item["offshore-pump-mk2"])
 
         hp_offshore_pump_mk2_item.name = "kyth-high-pressure-offshore-pump-mk2"
-        hp_offshore_pump_mk2_item.icon = "__Kythbloods_Stacked_Mining__/graphics/icons/offshore-pump-mk2.png"
+        hp_offshore_pump_mk2_item.icon = "__Stacked_Mining__/graphics/icons/offshore-pump-mk2.png"
         hp_offshore_pump_mk2_item.icon_size = 64
         hp_offshore_pump_mk2_item.icon_mipmaps = 4
         hp_offshore_pump_mk2_item.icons = nil
@@ -146,11 +146,11 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
         }
 
         -- in case the mk1 pump was not generated corrrectly because of some unexpected issue
-        if data.raw.item["kyth-high-pressure-offshore-pump"] then 
+        if data.raw.item["kyth-high-pressure-offshore-pump"] then
             table.insert(hp_offshore_pump_mk2_recipe.ingredients, {"kyth-high-pressure-offshore-pump", 1})
 
         elseif mods["PressurizedBarrels"] and data.raw.item["high-pressure-offshore-pump"] then
-            hp_offshore_pump_mk2_recipe.ingredients = 
+            hp_offshore_pump_mk2_recipe.ingredients =
             {
                 {"advanced-circuit", 10},
                 {"titanium-alloy", 15},
@@ -158,12 +158,12 @@ if mods["CompressedFluids"] and getSettingValue("kyth-high-pressure-offshore-pum
                 {"high-pressure-offshore-pump", 1}
             }
         end
-        
+
 
         data:extend(
         {
             hp_offshore_pump_mk2_entity,
-            hp_offshore_pump_mk2_item, 
+            hp_offshore_pump_mk2_item,
             hp_offshore_pump_mk2_recipe
         })
 
